@@ -26,6 +26,7 @@ A collection of useful Bash scripts for development, git operations, and system 
 
 ### System Tools
 - [Compare Diff](#compare-diff) - Compare two files with colorized diff output
+- [Create File](#create-file) - Create a new empty file with automatic .txt extension
 - [India Time](#india-time) - Convert time to India timezone or show current India time
 - [Nginx](#nginx) - Start or reload nginx server
 - [Safe Unzip](#safe-unzip) - Safely extract zip files with security checks and limits
@@ -141,6 +142,39 @@ compare-diff app.log app2.log
 
 # Compare files ignoring timestamps
 compare-diff log1.txt log2.txt --notime
+```
+
+---
+
+### Create File
+
+Create a new empty file with the specified name, automatically adding .txt extension if none is provided.
+
+**Dependencies:**
+- Bash shell environment
+- File system write permissions
+
+**Parameters:**
+- `$1` - Filename (required): Name for the new file to create
+
+**Usage:**
+```bash
+create-file <filename>
+```
+
+**Examples:**
+```bash
+# Create a text file with automatic .txt extension
+create-file myfile
+# Creates: myfile.txt
+
+# Create a file with specific extension
+create-file script.sh
+# Creates: script.sh
+
+# Create a configuration file  
+create-file config.json
+# Creates: config.json
 ```
 
 ---
